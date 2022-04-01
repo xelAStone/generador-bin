@@ -58,7 +58,7 @@ def luhn(num):
 	add=cc&1
 	for i in range(0,cc):
 		digito=int(num[i])
-		if not ((i&1)^add):
+		if not ((i&i)^add):
 			digito=digito*2
 		if digito >9:
 			digito=digito-9
